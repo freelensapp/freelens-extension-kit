@@ -35,14 +35,15 @@ the checkout of Freelens, at the tag of the targeted release.
 
 ## What the skill leaves open
 
-| The skill says                                             | In an extension built with the kit                                                                  |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Remove the `Example` feature, or replace it                | Remove it. Nothing replaces it yet: a feature needs an approved spec                                |
-| Keep the preferences store, or remove it                   | Remove it, until a spec needs a setting                                                             |
-| Keep the integration tests, or remove them as a whole      | Keep them: the method tests every view in Freelens ([Testing](testing.md))                          |
-| Keep the release, version and tag workflows only if wanted | Keep them when the extension will be published with them. Remove them when it will not be published |
-| Keep the scheduled maintenance workflows only if wanted    | Keep them, with their environment and its token                                                     |
-| Keep the workflows of the CI agent only if wanted          | The maintainer's choice                                                                             |
+| The skill says                                             | In an extension built with the kit                                                                                                                           |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Remove the `Example` feature, or replace it                | Remove it. Nothing replaces it yet: a feature needs an approved spec                                                                                         |
+| Keep the preferences store, or remove it                   | Remove it, until a spec needs a setting                                                                                                                      |
+| Keep the integration tests, or remove them as a whole      | Keep them: the method tests every view in Freelens ([Testing](testing.md))                                                                                   |
+| Keep the release, version and tag workflows only if wanted | Keep them when the extension will be published with them. Remove them when it will not be published                                                          |
+| Keep the scheduled maintenance workflows only if wanted    | Keep them, with their environment and its token                                                                                                              |
+| Keep the workflows of the CI agent only if wanted          | The maintainer's choice                                                                                                                                      |
+| Keep the generic sections of `AGENTS.md` as they are       | As they are, apart from a rule that restricts a model: it stays, or the rule of [Choosing a model](tools.md#choosing-a-model) replaces it, as the brief says |
 
 ## What the repository holds before its first spec
 

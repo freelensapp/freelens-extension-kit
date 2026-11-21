@@ -24,7 +24,8 @@ has the detail.
   the maintainer has said that the extension will never write: "no write is
   planned" is not never.
 - The text rules bind what the extension writes. The generic sections of the
-  template stay as they are, as the `create-extension` skill says.
+  template stay as they are, as the `create-extension` skill says, apart
+  from a rule that restricts a model when the brief replaces it.
 - The first rule names MIT, the license of the template and of the
   organization's extensions. An extension under another license names its
   own.

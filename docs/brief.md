@@ -37,7 +37,9 @@ A maintainer who prefers to write the brief starts from the template.
    the work of a milestone under a
    [delegation](process.md#delegation-for-a-milestone); which machines,
    coding agents and models the work may use
-   ([Dividing the work](dividing-the-work.md)).
+   ([Dividing the work](dividing-the-work.md)), and whether a rule of the
+   template that restricts a model stays
+   ([Choosing a model](tools.md#choosing-a-model)).
 2. **Scope by release.** The goal of the first release, in a sentence: what
    it has to be for its users. What it contains: a few things done properly.
    What comes after it, up to the first stable version, when the first

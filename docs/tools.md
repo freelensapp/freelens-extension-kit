@@ -100,6 +100,12 @@ capable one, and the report says so. No check is loosened to fit a model:
 the approved spec, the tests, the verification in the application and the
 review hold whatever wrote the change.
 
+The `AGENTS.md` of the template, which an extension inherits, may hold a
+rule that restricts a model to some tasks. The kit does not decide it for
+the maintainer: the [brief](brief.md) asks whether the extension keeps that
+rule as it is or replaces it with the rule of this section, and the
+repository starts that way.
+
 With more than one machine, coding agent or model at hand,
 [Dividing the work](dividing-the-work.md) says what goes where.
 
