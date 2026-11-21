@@ -24,6 +24,9 @@ relies on them.
   delegation leaves out.
 - Machines, coding agents and models the work may use, and the limits of
   each.
+- A rule of the template that restricts a model, if it has one: kept as it
+  is, or replaced by the rule of choosing the model for the task
+  ([Choosing a model](../docs/tools.md#choosing-a-model)).
 - Workflows of the template the repository will run: release, scheduled
   maintenance, the CI agent.
 - Anything else that is not open for discussion.
