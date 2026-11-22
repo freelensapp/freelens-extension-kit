@@ -5,8 +5,8 @@ the `create-extension` skill of
 [freelensapp/freelens](https://github.com/freelensapp/freelens/tree/v2.1.0/plugins/freelens).
 The skill says what to keep, adapt, remove and rewrite, and how to verify the
 result. This document says what the kit adds to it: whose repository it is,
-who does what, what the skill leaves open, and what the repository holds
-before its first spec.
+who does what, its settings in an organization, what the skill leaves open,
+and what the repository holds before its first spec.
 
 ## Whose repository it is
 
@@ -18,8 +18,9 @@ and [adoption](adoption.md) is a later and separate step.
 
 ## Who does what
 
-- **The maintainer** creates the empty repository and decides what cannot be
-  guessed: its owner and whether it is public, the npm scope of the package,
+- **The maintainer** creates the empty repository, or says that a coding
+  agent may, and decides what cannot be guessed: its owner and whether it is
+  public, the npm scope of the package,
   the author and the copyright holder, the first version number, and which
   workflows of the template the repository will run. These are in the
   [brief](brief.md). The secrets, the environments and the apps those
@@ -32,6 +33,21 @@ and [adoption](adoption.md) is a later and separate step.
 An agent that loads skills runs `create-extension`. One that does not reads
 its `SKILL.md` as a document and follows it. Either way the skill is read in
 the checkout of Freelens, at the tag of the targeted release.
+
+## Settings in an organization
+
+An organization that keeps its repositories alike has a standard for them,
+written down or not. A new repository there follows it, copied from one of
+its repositories that already does:
+
+- the settings of the repository, and its topics;
+- the access of the teams, and of the accounts that its workflows use;
+- the environments that the workflows need, with their deployment policies;
+- the ruleset of the default branch.
+
+The ruleset comes last, once the first commit is on the default branch and
+its checks have run green: that commit cannot come through a pull request,
+and the checks that the ruleset requires are named as their runs are.
 
 ## What the skill leaves open
 
@@ -50,6 +66,14 @@ the checkout of Freelens, at the tag of the targeted release.
 - The tooling and the workflows of the template, unchanged.
 - No feature: the `Example` kinds, pages, details and menu items are gone,
   and nothing has taken their place.
+- The registration fields that the skill keeps mapped through the error
+  boundary stay, empty and still mapped. Without them nothing but the tests
+  uses the error boundary, and the production pass of knip fails.
+- No page needs the component for a kind served in more than one API version
+  yet, so its four files go, as the skill allows, and
+  `src/renderer/vars.scss` goes with them: only their style used it.
+- The case of `error-boundary.test.tsx` that renders the `Example` page goes
+  with the page.
 - `package.json`, `README.md` and `LICENSE` with the names of the brief.
 - `AGENTS.md` adapted as the skill says, with the
   [method sections](../templates/agents-method-sections.md) of the kit right
