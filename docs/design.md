@@ -53,6 +53,10 @@ The views follow the journeys. An extension that renders each kind as
   stays in flight even with errors. A partial failure is not a success.
   Missing progress is indeterminate, not zero and not complete. A failed read
   is not zero failures.
+- An operation in flight never holds or replaces the health that the project
+  reports. It may soften the tone of the mark, and only for a bounded time,
+  counted from a time the project wrote. A health held without a bound hides
+  a real problem for good.
 - Only real timestamps are shown. A time the project did not write is not
   made up, and one that makes no sense is unavailable.
 - Words and icons carry the meaning without the color.

@@ -28,8 +28,10 @@ Status values: `Planned`, `Draft` (the spec is written, not approved),
 | Reconnaissance, and how the extension reaches a cluster | [SPEC-0001](../specs/SPEC-0001-short-slug.md) | Done    |
 | Test environment: kind, definitions and fixtures        | [SPEC-NNNN](../specs/SPEC-NNNN-short-slug.md) | Planned |
 | List and details of a kind                              | [SPEC-NNNN](../specs/SPEC-NNNN-short-slug.md) | Planned |
+| The pass before the milestone review, with its report   | [SPEC-NNNN](../specs/SPEC-NNNN-short-slug.md) | Planned |
 
-Exit of M1: what is true when the milestone is ready for its review.
+Exit of M1: what is true when the milestone is ready for its review. The pass
+built in M1 runs again before the review of every later milestone.
 
 ### Mn - Write actions (behind explicit confirmation)
 

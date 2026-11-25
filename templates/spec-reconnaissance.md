@@ -63,6 +63,13 @@ without credentials.
 
 What a user needs for each read, and what the cluster answers without it.
 
+### R7. The host
+
+What Freelens shows of these kinds without the extension, what its own
+components do with them, how the extensions of the organization that touch
+the same kinds read them, and the release of Freelens the extension declares
+it needs. Each fact cites Freelens at its release tag.
+
 ### Corrections to the brief
 
 Every `[check]` of the brief: confirmed, corrected or dropped.
