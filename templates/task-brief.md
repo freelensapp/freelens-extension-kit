@@ -35,7 +35,7 @@ Rules:
 Limits:
 - Change no file other than <files>.
 - Do not commit, push or open anything.
-- Read only <folders>.
+- Read only <folders>. Run git with `--no-optional-locks`.
 
 When done, check that <the checks to run>. Reply with <what to report>. Cite
 file and line for every finding, and list separately what you could not

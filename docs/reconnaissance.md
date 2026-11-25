@@ -71,6 +71,31 @@ software, unless the maintainer has said otherwise.
   them for the extension, without credentials.
 - **Permissions.** What a user needs for each read, and what the cluster
   answers without it.
+- **The host.** What Freelens already shows of these kinds without the
+  extension, what its own components do with them, such as its list, its
+  details panel and its menus, how the extensions of the organization that
+  touch the same kinds read them, and the release of Freelens the extension
+  declares it needs. Freelens is read at the release tag the work is pinned
+  to, like the project.
+
+## Dividing the reading
+
+A project of more than a few kinds is read in parts, by sessions that each
+get a closed brief ([task template](../templates/task-brief.md)):
+
+1. Read-only sessions, one for each area: a group of kinds, the project's
+   own tools, the host. Each one writes a single note in the notes of the
+   [workspace](workspace.md), every fact with its source.
+2. The digest is drafted from the notes, in parts when it is long.
+3. Each part is checked against the sources by an
+   [independent reviewer](review.md#the-independent-reviewer). A digest
+   drafted from notes carries wrong and imprecise facts that only this check
+   finds.
+4. The findings are applied by a session that checks each one against the
+   source before it applies it, since a reviewer can be wrong too.
+
+The decisions of `SPEC-0001`, from the architecture to the status model, are
+written in the main session, from the reviewed digest.
 
 ## What SPEC-0001 holds
 

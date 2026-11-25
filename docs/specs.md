@@ -108,8 +108,11 @@ default exists: at most three in a spec, each with a concrete question.
 
 The roadmap is the single source of truth for scope and progress. It is
 written once `SPEC-0001` is approved, in a pull request of its own, and the
-maintainer approves it by approving that pull request. From then on it is
-updated in every pull request that starts, completes or re-scopes a feature.
+maintainer approves it by approving that pull request, or in words before it,
+often together with `SPEC-0001`. An approval in words is recorded in the
+pull request and in the session notes, with the words and the date. From
+then on the roadmap is updated in every pull request that starts, completes
+or re-scopes a feature.
 
 - It states the goal of the first stable version, `1.0.0`, and the releases
   that lead to it, the first one being the first release of the brief.

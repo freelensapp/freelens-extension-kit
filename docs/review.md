@@ -76,7 +76,9 @@ Whoever wrote a spec or a change cannot see what they took for granted. So a
 second session reviews it: a new session of a coding agent, or a person, that
 has none of the author's context.
 
-- **It is read only.** It changes nothing.
+- **It is read only.** It changes nothing, not even the index of a
+  checkout: a plain `git status` rewrites it, so its git commands run with
+  `--no-optional-locks`.
 - **It gets the text and the sources.** The drafts of the specs, or the diff,
   and the folders it may read: the project at the reviewed release, Freelens,
   the template.
@@ -94,7 +96,8 @@ Two checks follow every piece of work that was not done by the author's own
 hands:
 
 - **Read the final report**, when the work has ended, and not a draft it left
-  on disk along the way.
+  on disk along the way. A long report is saved then, to a file in the notes
+  of the workspace, and applied from there.
 - **Check the attributions.** Search the text and the commit messages for the
   role of the maintainer: every decision attributed to the maintainer has to
   be one the maintainer took. The rest is "decided while implementing".

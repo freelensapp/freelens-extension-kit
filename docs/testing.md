@@ -48,6 +48,18 @@ demand. The second keeps them honest. Three rules tie them together:
   rejects, such as an unknown phase or an impossible time, are tested at the
   unit layer.
 
+The objects of the first tier are best captured from the second: the real
+project brings its clusters into each state, and a script reads the objects
+back and writes them as files. Two things make a capture worth trusting:
+
+- **It waits until the state has settled.** A state is captured when every
+  controller that reports on it has reported, a health check that counts the
+  new machines included, and not when the main conditions first turn.
+- **It cleans what the capture machine leaves.** Besides what the API server
+  adds, a controller can copy facts of the machine it runs on into a status,
+  such as the capacity of the host. The cleaning replaces them with fixed
+  values, and a test scans every captured set for them.
+
 ## What runs when
 
 | Suite                               | On a pull request                                                                                                       | On `main` | Every night |
@@ -98,6 +110,10 @@ and touch nothing else: the rules are in [Safety](safety.md).
 - **A test that was not run is unverified, not passed.** A fallback is partial
   evidence. A working tier is not discarded because another prerequisite
   failed, and it is never replaced by a write to a real cluster.
+- **An expected error is left out narrowly.** A session that has to accept
+  an error it cannot avoid, such as one the host logs for a view of its own,
+  leaves out that one message, decided when it arrives from the frame and
+  the page that logged it, and never a pattern for the whole session.
 
 ## Domain correctness
 
