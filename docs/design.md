@@ -33,6 +33,11 @@ The views follow the journeys. An extension that renders each kind as
 - A list of resources is the list layout of the host,
   `Renderer.Component.KubeObjectListLayout`. A custom table in its place is
   forbidden.
+- A list stays live through the subscription that the layout of the host makes
+  of its stores, not through a reader of the extension's own. Such a reader
+  can hide a list that has gone stale: the stores are shared with other
+  readers, the host reloads a watch that expired, and a user may not be
+  allowed to watch the whole cluster.
 - The columns follow one grammar, in this order: Name, Namespace, the columns
   of the domain, Condition, Status, Age. The columns of the domain carry what
   the operator looks at every day, the most important first.
@@ -225,7 +230,13 @@ a list.
   these directives. A deviation updates the `DESIGN.md` of the extension in
   the same pull request, or is dropped.
 - A pull request that touches the interface says which themes and which
-  states were checked, with screenshots from the check in the application.
+  states were checked, with screenshots from the check in the application,
+  taken before the diff is reviewed. The unit tests render a view on the stub
+  of the SDK, with none of the styles of the host, and miss cells on several
+  lines, rows that overlap and names cut to a few letters, which the first
+  screenshot shows.
+- A cell of a list is held to one line by a test of the stylesheets, which
+  fails on a cell that can wrap, and by the screenshots.
 - The [pre-review pass](review.md#the-pre-review-pass) asserts what a machine
   can assert.
 - The [milestone review](process.md#milestone-review) asks of every view: is

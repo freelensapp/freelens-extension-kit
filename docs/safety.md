@@ -29,7 +29,12 @@ of them sets the ground rules for every write of the extension.
 
 **What a write is.** Whatever creates, patches or deletes an object. A request
 that creates an object is a write, even when the user only asked to look at
-something, such as a log that the project serves through a request object.
+something, such as a log that the project serves through a request object. So
+is a removal that the host offers on a page of the extension. A page hands the
+list layout of the host a store that selects and removes nothing: the layout
+offers to remove what its store has selected, even on a page that shows no
+checkbox, and a store of the host keeps what was selected in the host's own
+list of the kind.
 
 **Confirmation.** Whatever changes the desired state of a resource, interrupts
 a workload or deletes something first asks for an explicit confirmation. The

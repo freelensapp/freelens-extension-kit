@@ -76,7 +76,10 @@ software, unless the maintainer has said otherwise.
   details panel and its menus, how the extensions of the organization that
   touch the same kinds read them, and the release of Freelens the extension
   declares it needs. Freelens is read at the release tag the work is pinned
-  to, like the project.
+  to, like the project, and at every other release that `engines.freelens`
+  admits, since what a view relies on can be missing from an older one. What
+  the source leaves open is settled by a probe in the running application, at
+  each of those releases.
 
 ## Dividing the reading
 

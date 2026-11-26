@@ -81,7 +81,9 @@ has none of the author's context.
   `--no-optional-locks`.
 - **It gets the text and the sources.** The drafts of the specs, or the diff,
   and the folders it may read: the project at the reviewed release, Freelens,
-  the template.
+  the template. For a diff, also the log of the checks its author
+  [saw failing](testing.md#checks-worth-trusting), with each line broken on
+  purpose, so that it can check a sample of them by reading.
 - **It checks every claim against the sources**, and cites file and line for
   each finding.
 - **It lists separately what it could not verify.** The author then verifies
@@ -89,8 +91,11 @@ has none of the author's context.
 
 It runs on the drafts of the specs before they are approved, where a wrong
 fact about the project costs the most, and on the diff of a slice before its
-pull request. Any coding agent can do it, as a new session started with a
-task brief ([Tools](tools.md#running-the-checks-with-any-agent)).
+pull request. A draft that designs how the views read the cluster, or the
+status model, takes about four rounds, each narrower than the last: after the
+first, a round reviews the diff of the last revision. Any coding agent can do
+it, as a new session started with a task brief
+([Tools](tools.md#running-the-checks-with-any-agent)).
 
 Two checks follow every piece of work that was not done by the author's own
 hands:

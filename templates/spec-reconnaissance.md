@@ -68,7 +68,8 @@ What a user needs for each read, and what the cluster answers without it.
 What Freelens shows of these kinds without the extension, what its own
 components do with them, how the extensions of the organization that touch
 the same kinds read them, and the release of Freelens the extension declares
-it needs. Each fact cites Freelens at its release tag.
+it needs. Each fact cites Freelens at its release tag, and says so when it
+does not hold at every release that `engines.freelens` admits.
 
 ### Corrections to the brief
 
