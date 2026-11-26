@@ -110,6 +110,9 @@ It covers nothing that leaves the repository: no release, no package, no
 announcement, no other repository, no issue or pull request of someone
 else. A question that cannot be undone, that is about the domain or that
 changes the scope still goes to the maintainer before the work goes on.
+Scope is added to an approved roadmap as
+[Specs and roadmap](specs.md#adding-to-the-scope) says: a proposal first,
+then the decision of the maintainer, recorded in the roadmap.
 
 ## Rules on top of the loop
 

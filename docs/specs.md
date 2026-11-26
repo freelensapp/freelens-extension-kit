@@ -96,6 +96,17 @@ stays where it was produced: the commands, their output and the counts in the
 pull request, the runs in CI. A spec that collects every run becomes too long
 to review.
 
+The facts that a probe in the running application establishes
+([Reconnaissance](reconnaissance.md#rules)) are written into the spec, in a
+section of numbered facts, each with the releases it was seen at and what was
+tried. The spec never cites a file outside the repository for them: a later
+reader has only the repository.
+
+A rule that waits for a probe is written with its fallback, what holds if
+the probe does not settle it, and is marked as waiting. No such mark is left
+at the approval: the rule stands on the facts of the probe, or its fallback
+becomes the rule.
+
 A change to an approved spec is made in the spec, in the pull request that
 needs it, under "Notes and deviations", and the description of the pull
 request calls it out. A decision taken while implementing is recorded there
@@ -127,3 +138,25 @@ guess: the kinds of the project at the reviewed release, its own tools, and
 what its users do with them. When the brief names a reference to match or to
 surpass, the roadmap covers the inventory of that reference too: each of its
 features is in a milestone, or out of scope with a reason.
+
+### Adding to the scope
+
+Once the roadmap is approved, the maintainer decides what is added to the
+scope, even under the [delegation](process.md#delegation-for-a-milestone) of
+a milestone. The contributor brings a proposal first:
+
+- where the new item goes: into the spec of a feature that the roadmap lists,
+  or as a feature of its own, and in which milestone;
+- what it changes in the features that are done: the specs, the fixtures and
+  the tests it reopens, if any;
+- the facts it rests on, each with its source.
+
+A source that `SPEC-0001` did not read, such as another project the item
+relies on, is read as the [reconnaissance](reconnaissance.md) reads the
+project, at a release tag and a commit that are written down, before any
+spec uses it.
+
+The decision is recorded in the roadmap, under "Changes of scope": what was
+added and where, approved by the maintainer, and the date. The pull request
+that records it says the same. What moves out of the scope is recorded there
+too.

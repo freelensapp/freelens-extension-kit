@@ -91,11 +91,16 @@ has none of the author's context.
 
 It runs on the drafts of the specs before they are approved, where a wrong
 fact about the project costs the most, and on the diff of a slice before its
-pull request. A draft that designs how the views read the cluster, or the
-status model, takes about four rounds, each narrower than the last: after the
-first, a round reviews the diff of the last revision. Any coding agent can do
-it, as a new session started with a task brief
-([Tools](tools.md#running-the-checks-with-any-agent)).
+pull request. Any coding agent can do it, as a new session started with a
+task brief ([Tools](tools.md#running-the-checks-with-any-agent)).
+
+A draft that designs a view, how the views read the cluster, or the status
+model, takes about four rounds, each narrower than the last. A
+[probe in the running application](reconnaissance.md#rules) runs beside the
+first. After the first, a round reviews the diff of the last revision, and
+the last round can be one reviewer on a short list: whether the findings of
+the round before were resolved, what the last revision added, and the facts
+of a probe against what was probed.
 
 Two checks follow every piece of work that was not done by the author's own
 hands:

@@ -4,7 +4,8 @@ Goal for v1.0.0: the outcome for the user, in two or three sentences.
 
 This file is the single source of truth for scope and progress. Update it in
 every pull request that starts, completes or re-scopes a feature. Nothing
-moves out of the agreed scope without a decision recorded here.
+moves into or out of the agreed scope without a decision of the maintainer,
+recorded under "Changes of scope".
 
 The extension is built for Freelens `<release>`. It follows `<project>`
 `<release>`, reviewed in [SPEC-0001](../specs/SPEC-0001-short-slug.md).
@@ -46,6 +47,13 @@ cluster.
 ## Out of scope
 
 - What the extension does not do, and where the user does it instead.
+
+## Changes of scope
+
+One line for each decision taken after the approval of this roadmap:
+
+- `<date>`: what was added and where it goes, or what moved out of the scope.
+  Approved by the maintainer.
 
 ## Release criteria for v1.0.0
 
