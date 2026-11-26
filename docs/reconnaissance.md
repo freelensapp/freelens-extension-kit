@@ -132,6 +132,11 @@ written in the main session, from the reviewed digest.
 - The drafts of the specs that state how the project behaves are checked by
   the [independent reviewer](review.md#the-independent-reviewer) against the
   source, before their pull request.
+- What a draft relies on and the source leaves open is probed in the running
+  application, at each release that `engines.freelens` admits, beside the
+  first round of that review and not after the approval: a probe can show
+  that a rule as first written cannot work. Its facts are written into the
+  spec ([Specs and roadmap](specs.md#evidence)).
 - The reconnaissance is repeated, in small, at every drift watch
   ([Maintenance](maintenance.md)): a new release is read for what changed,
   and the specs it affects record the release they were reviewed against.
