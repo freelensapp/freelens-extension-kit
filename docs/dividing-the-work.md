@@ -48,6 +48,9 @@ main session. The work with the maintainer stays one thing at a time.
 - **The same tools everywhere.** A second machine is set up like the first
   ([Workspace](workspace.md#what-the-machine-needs)), with the same pinned
   versions. A result from other versions is not a result.
+- **Long steps in the foreground.** On a second machine, a suite, a build or
+  the creation of a cluster runs in the foreground of a remote command of its
+  own. A process left in the background of a remote session can die with it.
 - **Everything that comes back is verified** in the main session, like any
   other work: its tests, its checks, its final report
   ([Review](review.md#delegated-tasks)).

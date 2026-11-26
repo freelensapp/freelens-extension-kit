@@ -93,7 +93,9 @@ wants them:
 ## Rules that hold at every step
 
 - **Sources, not memory.** Read the code of Freelens, the template and the
-  project at the versions the work is pinned to. Most extension code found
+  project at the versions the work is pinned to, and Freelens also at every
+  release that `engines.freelens` admits
+  ([Reconnaissance](docs/reconnaissance.md)). Most extension code found
   elsewhere is written for the v1 API, which Freelens 2 does not load.
 - **Verify, then say.** Verify everything before reporting it, the interface
   included, as a person would use it. Say what could not be verified, as

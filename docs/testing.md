@@ -73,6 +73,15 @@ The pre-review pass is run in full, with its report and its screenshots,
 before the review of a milestone. In CI it is one more suite of the views,
 taken by the same rule.
 
+A session in Freelens written on a machine that cannot run it runs in CI at
+once, on its branch, before the diff is reviewed: its first run finds what no
+reading of it does. When no machine at hand runs the application, the
+screenshots of a view in each theme ([Design](design.md#theme)) can come from
+CI too: a run dispatched on a branch made for them, with one job for each
+theme, which is set in the profile before the application starts. The
+screenshots are uploaded as artifacts of the run, and the branch is deleted
+once they are read.
+
 ## Commands
 
 The harness of the template has `pnpm test:unit` and `pnpm test:integration`.
@@ -95,14 +104,25 @@ and touch nothing else: the rules are in [Safety](safety.md).
 
 - **A check must be seen failing.** A new test, guard or script is run once
   against the broken case before it is trusted, and the line that was broken
-  on purpose is printed: a mutation that did not apply proves nothing.
+  on purpose is printed: a mutation that did not apply proves nothing. The
+  checks at the end of a session report every failure at once, so that a
+  broken case, such as a write planted on purpose, shows every check it fails,
+  not only the first.
 - **A fixture that injects the hypothesis proves nothing about the cause.**
   Reproduce a defect from what really produces it.
 - **An action is verified on the cluster.** Read the cluster before and after
-  it. An interface that shows no error proves nothing.
+  it. An interface that shows no error proves nothing. When a session checks
+  that the application wrote nothing, by the versions of the objects before
+  and after, it records each write of its own by the version in the answer of
+  the server, and checks that this version changed: with `--output`,
+  `kubectl label` prints the version the object had before the write, and
+  `kubectl patch --type merge` the one the server answered with.
 - **The interface follows the cluster with a delay.** Wait for the expected
   content, not for a fixed time, before deciding that a view is empty or
-  wrong.
+  wrong. It follows an input with a delay too: a hover or a click waits until
+  the host has applied the input that changed the list. The search of the host
+  filters after a short delay, and until it has, a row can move under the
+  pointer.
 - **The same pattern lives in sibling paths.** When a defect is fixed, search
   the code for the same pattern before closing the fix.
 - **What was tested is what is in the commit.** Check the commit, not the
