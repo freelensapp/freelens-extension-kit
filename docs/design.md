@@ -43,6 +43,8 @@ The views follow the journeys. An extension that renders each kind as
   the operator looks at every day, the most important first.
 - A cell is one line. The list is virtualized with rows of a fixed height, so
   a long value is truncated and its tooltip carries it whole.
+- The parts of a cell, its marks and the words next to them, stand a little
+  apart, whichever follows which: two words that touch read as one.
 - A missing value says so, with "N/A". No cell is empty.
 - A click on a row opens the details. A link inside a row does not fight it.
 
@@ -236,7 +238,8 @@ a list.
   lines, rows that overlap and names cut to a few letters, which the first
   screenshot shows.
 - A cell of a list is held to one line by a test of the stylesheets, which
-  fails on a cell that can wrap, and by the screenshots.
+  fails on a cell that can wrap, and by the screenshots. Its parts are held
+  apart by a session in the application that reads their boxes.
 - The [pre-review pass](review.md#the-pre-review-pass) asserts what a machine
   can assert.
 - The [milestone review](process.md#milestone-review) asks of every view: is

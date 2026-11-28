@@ -80,7 +80,9 @@ screenshots of a view in each theme ([Design](design.md#theme)) can come from
 CI too: a run dispatched on a branch made for them, with one job for each
 theme, which is set in the profile before the application starts. The
 screenshots are uploaded as artifacts of the run, and the branch is deleted
-once they are read.
+once they are read. Each screenshot is looked at before it is posted: a defect
+that only a screenshot shows gets a check of a session that fails on it, and
+then its fix.
 
 ## Commands
 
@@ -107,7 +109,14 @@ and touch nothing else: the rules are in [Safety](safety.md).
   on purpose is printed: a mutation that did not apply proves nothing. The
   checks at the end of a session report every failure at once, so that a
   broken case, such as a write planted on purpose, shows every check it fails,
-  not only the first.
+  not only the first. A planted run is written down as seen failing only once
+  it has run and failed where it should; until then the notes say that it is
+  still to be seen.
+- **A session of two extensions together is written from a probe.** Before a
+  session runs a view next to another extension, both run together in the
+  application: what the other one shows on its pages, and what the host does
+  when one of them is disabled with its page open, come from that probe and
+  go into the spec. Neither source says it.
 - **A fixture that injects the hypothesis proves nothing about the cause.**
   Reproduce a defect from what really produces it.
 - **An action is verified on the cluster.** Read the cluster before and after

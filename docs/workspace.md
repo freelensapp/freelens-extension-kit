@@ -126,7 +126,10 @@ knowing nothing of the last. What carries the work across is a file:
   resumes from the first lines;
 - below, the decisions, each with its date and the words of who took it;
 - read at the start of every session, and updated when a decision is taken
-  and when the session ends.
+  and when the session ends;
+- when the work resumes after a pause, read together with the rules that the
+  maintainer gave meanwhile for every extension, each brought to this one and
+  recorded, and the one that changes an approved spec asked first.
 
 Once the repository has its roadmap and its specs, they are the source of
 truth for scope and progress. The notes keep the state of the session and

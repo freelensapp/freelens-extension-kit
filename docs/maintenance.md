@@ -34,18 +34,20 @@ moves the project there asks for this watch before it is merged.
 
 ## A release of Freelens
 
-`engines.freelens` names the oldest release the extension runs on, and stays
-there. Renovate brings each release of the SDK. Before that pull request is
-merged:
+`engines.freelens` names the latest release of Freelens, and moves with each
+release: an extension is tried on the Freelens that its users have. Renovate
+brings each release of the SDK. Before that pull request is merged:
 
 1. Read what the release changed in the extension API, in its documents and
    in the template.
-2. Move together every place that names the version of Freelens: the
-   Freelens the tests run on, and the documents.
+2. Move together every place that names the version of Freelens:
+   `engines.freelens`, the Freelens the tests run on, the matrix of CI, and
+   the documents.
 3. Record the reading in the pull request: the release, what changed for the
    extension, and what was taken in or why nothing was.
 
-A new major version of Freelens needs a spec of its own.
+An older release is tried again only when a change needs it, such as a
+regression to date. A new major version of Freelens needs a spec of its own.
 
 ## Template alignment
 
